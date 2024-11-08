@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <title>Dynamic-Resume-Builder</title>
+</head>
+<body>
+    <div id="form-area">
+        <div class="form-content">
+        <h1>Resume Builder</h1>
+
+        <h2 class="Info">Personal Information</h2>
+        <div id="infoQue">
+            <h3>Enter your Father Name:</h3> 
+            <input type="text" id="Fathername" placeholder="Enter Father Name">  
+            <h3>Enter your DateOfBirth:</h3>
+            <input type="date" id="dOb" placeholder="Date OF Birth">
+            <h3>Enter your CNIC No:</h3>
+            <input type="number" id="CNIC" placeholder="CNIC No">
+            <h3>Enter your Domicile:</h3>
+            <input type="text" id="domicile" placeholder="Domicile">
+            <h3>Enter your Martial Status:</h3>
+            <input type="text" id="martial" placeholder="Martial Status">
+            <h3>Enter your Religion:</h3>
+            <input type="text" id="religion" placeholder="religion">
+            <h3>Enter your Nationality:</h3>
+            <input type="text" id="nationality" placeholder="Nationality">
+            <h3>upload you photo:</h3>
+            <input type="file" id="photo" accept="/image*">
+            <h3>About me</h3>
+            <textarea name="aboutme" id="aboutme" cols="30" rows="1"></textarea>
+            <h3>Enter your Email:</h3>
+            <input type="email" id="email" placeholder="Enter email">
+            <h3>Enter your Phone No:</h3>
+            <input type="tel" id="phone" placeholder="Phone No">
+            <h3>Enter your Address:</h3>
+            <input type="text" id="address" placeholder="Address">
+            <h3>language</h3>
+            <textarea name="language" id="language" cols="30" rows="1" placeholder="enter language use ,to show nextline e.g Eng,urdu"></textarea>
+        </div>
+        <h2 class="Info">Education</h2>
+        <div id="infoQue">
+            <h3>Enter your Name:</h3> 
+            <input type="text" id="name" placeholder="Enter Name">  
+            <h3>enter your role:</h3>
+            <input type="text" id="role" placeholder="e.g. Software Dev">
+            <h3>Enter your Education:</h3>
+            <textarea name="education" id="education" cols="30" rows="5" placeholder="Enter Education"></textarea>
+        </div>
+
+        <h2 class="Info">Experience</h2>
+        <div id="infoQue">
+            <h3>Enter your Experience:</h3>
+            
+            <textarea name="experience" id="experience" cols="30" rows="5" placeholder="Enter Experience"></textarea>
+
+            
+        </div>
+
+        <h2 class="Info">Skills</h2>
+        <div id="infoQue">
+            <h3>Enter your skills:</h3>
+            <textarea name="skills" id="skills" cols="30" rows="1" placeholder="enter skill use ,to show nextline e.g html,css"></textarea>
+        </div>
+        
+        <h2 class="Info">Projects</h2>
+        <div id="infoQue">
+        <h3>Enter your projects:</h3>
+        <input type="text" id="projects" placeholder="Enter projects"> 
+        </div>
+        <div class="buttons">
+        <button id="generateResume" class="btn">Generate</button>
+        <button id="submitButton" class="btn"><a id="share-link" href="#" target="_blank" class="btn">Shareable Link</a></button>
+        </div>
+    </div>
+         <!-- Generated Resume Preview -->
+   <div id="resumePreview" class="resume-preview" style="display: none;">
+    <div class="left-preview" id="left">
+        <img id="preview-picture" src="" alt="Profile Picture">
+        <h3 id="preview-about-me"></h3>
+        <p id="preview-phone"></p>
+        <p id="preview-email"></p>
+        <p id="preview-address"></p>
+        <p id="preview-language"></p>
+    </div>
+    <div class="right-preview" id="right">
+    </div>
+     </div>
+     <button id="downloadResume" class="btn">Download Resume as PDF</button>
+</div>
+</body>
+<script src="main.js"></script>
+</body>
+</html>
